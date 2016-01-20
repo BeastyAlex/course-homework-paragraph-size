@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+    <section>
+        <button class="my-button" type="button" onclick="moreFunction()"><i class="fa fa-search-plus"></i>
+</button>
+        <button class="my-button" type="button" onclick="lessFunction()"><i class="fa fa-search-minus"></i>
+</button>
+        <p class="first-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet nulla erat. Proin lacus massa, efficitur auctor maximus id, pretium quis quam. In fermentum est est, sed tincidunt dolor egestas sed. Vestibulum porttitor tincidunt diam a feugiat. Duis in rutrum nulla. Fusce dictum, erat non gravida suscipit, sem purus pulvinar diam, sed ullamcorper lectus metus non quam. Curabitur vestibulum pellentesque lorem sit amet semper. Pellentesque eu dapibus dui.</p>
+        <p>Donec posuere ligula enim, at dictum leo tempus at. Nam fermentum rutrum justo sed bibendum. Etiam id fringilla erat. Phasellus vel tristique massa. Praesent eget efficitur magna. Etiam sit amet sodales ligula. Etiam sed pellentesque dolor, a efficitur felis. Suspendisse ultricies sagittis augue. Vivamus iaculis, felis elementum interdum ultrices, nisi mauris accumsan eros, nec venenatis massa nisi in diam. Praesent consequat eu lacus id bibendum.</p>
+        <p>Nunc blandit eros et mi rhoncus consectetur. Suspendisse nulla neque, tempus id pretium vitae, convallis et metus. Etiam non nulla nec lorem suscipit luctus volutpat et quam. Fusce pharetra tincidunt nibh, a hendrerit dolor facilisis eget. Etiam viverra dolor tellus, quis iaculis orci porta vitae. Cras vestibulum orci non leo elementum, sit amet dictum urna tincidunt. In sit amet elit ornare ex euismod rhoncus. Nullam sit amet est ut augue lobortis blandit. Curabitur arcu justo, lacinia eget malesuada a, tempus efficitur metus. Aliquam gravida lectus vehicula neque condimentum, ut placerat dolor faucibus. Sed consectetur libero sit amet urna tempor mattis. Phasellus id rhoncus tellus. Integer tristique eros quis ex faucibus convallis eget aliquam urna. Curabitur id turpis ultricies, bibendum augue in, fringilla elit. Etiam auctor eleifend gravida.</p>
+        <p>Cras varius, tellus et fermentum gravida, lacus orci porta mauris, volutpat elementum ipsum tellus a risus. Duis nisi est, sagittis sit amet sem eu, rutrum interdum urna. Ut ac metus pellentesque, malesuada purus quis, auctor libero. Praesent ex nunc, luctus non vulputate at, egestas non nibh. Praesent ac sem elit. Pellentesque mi lorem, egestas in enim varius, consequat mollis diam. Vivamus faucibus quis nibh laoreet commodo. Vestibulum at dolor velit. Ut dictum et diam nec venenatis. Suspendisse dictum nisi augue, ut egestas diam auctor non. Vestibulum porttitor lectus ac justo posuere aliquet. Aenean feugiat massa quis risus pellentesque lobortis.</p>
+    </section>
+
+    </div>
+
+    <script>
+        //document.querySelector(".first-paragraph").style.fontSize = "20px"; 
+        //document.querySelectorAll("p").style.fontSize = "13px";  //не работает вместе с остальным кодом, поэтому задала font size в css
+        var currentSize = 13;
+        function moreFunction() {
+            currentSize = currentSize * 1.5;
+            newResult = currentSize.toString() + "px";
+            document.querySelector(".first-paragraph").style.fontSize = newResult;
+            console.log(newResult);
+        }
+        
+        function lessFunction() {
+            currentSize = currentSize / 1.5;
+            newResult = currentSize.toString() + "px";
+            document.querySelector(".first-paragraph").style.fontSize = newResult;  
+            console.log(newResult);
+        }
+        
+    </script>
+</body>
+</html>
